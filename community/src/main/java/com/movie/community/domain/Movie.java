@@ -33,7 +33,7 @@ public class Movie {
 	private String description;
 
 	@Column
-	private float score;
+	private double score;
 
 	@Column
 	private int voteCount;
@@ -45,7 +45,7 @@ public class Movie {
 	private LocalDate releasedDate;
 
 	@Column
-	private float popularity;
+	private double popularity;
 
 	@Column
 	private String genres;

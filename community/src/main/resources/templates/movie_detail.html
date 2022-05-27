@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/default_layout">
+
+<th:block layout:fragment="content">
+
+    <!-- movie_detail.html -->
+    <!-- # 선택한 영화의 디테일을 설명하는 부분 # -->
+    <div id="movie-detail" class="d-flex justify-content-center m-5">
+        <div id="movie-image" class="w-25 m-5">
+        </div>
+        <div id="movie-des" class="d-flex justify-content-center flex-column w-75 m-5">
+            <!-- Movie - title -->
+            <div id="title" class="my-2 mx-5">
+            </div>
+            <!-- Movie - score -->
+            <div id="score" class="my-2 mx-5">
+            </div>
+            <!-- Movie - description -->
+            <div id="description" class="my-2 mx-5">
+            </div>
+            <!-- Movie - release_date -->
+            <div id="release-date" class="my-2 mx-5">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- recommendation -->
+    <h1 class="text-center m-5">RECOMMEND</h1>
+    <!-- # 추천 영화 6개를 출력하는 부분 # -->
+    <!-- 추천 알고리즘에서 영화 6개 뽑아와야... -->
+    <div id="movie-recommendation-list" class="d-flex justify-content-center m-5">
+        <!--        <a>-->
+        <!--            <img style="width: 90%;" src="./images/movie2.jpg" alt="...">-->
+        <!--        </a>-->
+        <!--        <a>-->
+        <!--            <img style="width: 90%;" src="./images/movie3.jpg" alt="...">-->
+        <!--        </a>-->
+        <!--        <a>-->
+        <!--            <img style="width: 90%;" src="./images/movie4.jpg" alt="...">-->
+        <!--        </a>-->
+        <!--        <a>-->
+        <!--            <img style="width: 90%;" src="./images/movie5.jpg" alt="...">-->
+        <!--        </a>-->
+        <!--        <a>-->
+        <!--            <img style="width: 90%;" src="./images/movie6.jpg" alt="...">-->
+        <!--        </a>-->
+        <!--        <a>-->
+        <!--            <img style="width: 90%;" src="./images/movie2.jpg" alt="...">-->
+        <!--        </a>-->
+    </div>
+
+    <!-- review -->
+    <h1 class="text-center m-5">REVIEWS</h1>
+    <!-- # 영화에 달린 리뷰를 모두 출력 해야함 # -->
+
+    <div id="review-create-form">
+        <form>
+            <div class="form-group d-flex align-items-center">
+                <label for="review-content"><h2>내용 : </h2></label>
+                <input class="mx-2" type="text" id="review-content">
+            </div>
+
+            <div class="d-flex justify-content-start">
+                <div class="form-group d-flex align-items-center">
+                    <label for="review-score"><h2 class="mb-0">평점 : </h2></label>
+                    <!--                <input type="text" id="review-score">-->
+                    <select class="mx-2" style="width: 100px;" name="job" id="review-score">
+                        <option value="1.0">1.0</option>
+                        <option value="1.5">1.5</option>
+                        <option value="2.0">2.0</option>
+                        <option value="2.5">2.5</option>
+                        <option value="3.0">3.0</option>
+                        <option value="3.5">3.5</option>
+                        <option value="4.0">4.0</option>
+                        <option value="4.5">4.5</option>
+                        <option value="5.0">5.0</option>
+                    </select>
+                    <a id="review-submit" type="button"><h3 class="mb-0">WRITE</h3></a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <table class="table mt-5 w-75" style="margin-left: auto; margin-right: auto;">
+        <thead>
+        <tr>
+            <th scope="col" class="text-center">
+                <h2>REVIEW</h2>
+            </th>
+            <th scope="col" class="text-center">
+                <h2>WRITER</h2>
+            </th>
+            <th scope="col" class="text-center">
+                <h2>DATE</h2>
+            </th>
+            <th scope="col" class="text-center">
+                <h2>SCORE</h2>
+            </th>
+            <th scope="col" class="text-center">
+                <h2></h2>
+            </th>
+
+        </tr>
+        </thead>
+
+        <tbody id="review-view-list">
+
+        </tbody>
+    </table>
+</th:block>
+</html>

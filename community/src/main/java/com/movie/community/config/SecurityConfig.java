@@ -9,6 +9,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -58,5 +59,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 				.antMatchers(HttpMethod.DELETE, "/holiday/**").hasAuthority("admin")
 //				.antMatchers("/reviews/**", "/movies/**", "/holiday/**").permitAll() // for test
 				.anyRequest().authenticated();
+	}
+
+	@Override
+	public void configure(WebSecurity web) throws Exception {
+		web.ignoring().antMatchers("/css/**", "/js/**", "/images/**", "/static/**");
+		web.ignoring().antMatchers("/", "/sign-up"); // home, 회원가입 화면은 모두에게 열려 있어야 함
+		web.ignoring().antMatchers("/view/**"); // 모든 화면을 제공받을 수 있게 함.
 	}
 }

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<script></script>
+<!-- 01_nav_footer.html -->
+
+<footer class="pt-5 mt-2" th:fragment="footerFragment">
+    <div class="fixed-bottom sticky-end d-flex flex-row-reverse align-items-center" style="opacity: 0.8;">
+        <a type="button" class="btn my-2" href="#">
+            <img th:src="@{/images/arrow.png}" alt="arrow">
+        </a>
+        <a onclick="goBack()" type="button" class="btn my-2 px-0" href="#">
+            <img th:src="@{/images/arrow2.png}" alt="arrow2">
+        </a>
+    </div>
+</footer>
+
+</html>

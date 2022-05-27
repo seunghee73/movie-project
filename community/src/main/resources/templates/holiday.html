@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/default_layout">
+
+<th:block layout:fragment="content">
+
+    <!-- holiday.html -->
+    <h1 class="text-center m-5">HOLIDAY LIST</h1>
+
+    <!-- holiday에 담긴 정보가 쭉 출력되어야 함 -->
+      <div class="row container-fluid d-flex justify-content-center">
+        <section class="col col-12 col-lg-10">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center h2">HOLIDAY</th>
+              </tr>
+            </thead>
+            <tbody id="holiday-list">
+<!--              <tr>-->
+<!--                <th scope="row" class="text-center">{holiday}</th>-->
+<!--              </tr>-->
+
+            </tbody>
+          </table>
+        </section>
+      </div>
+    <nav aria-label="Page navigation example" style="margin-bottom: 50px;" class="d-flex justify-content-center align-items-center">
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link text-dark" href="#">PREVIOUS</a></li>
+        <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
+        <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+        <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+        <li class="page-item"><a class="page-link text-dark" href="#">NEXT</a></li>
+      </ul>
+    </nav>
+
+</th:block>
+</html>

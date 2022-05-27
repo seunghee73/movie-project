@@ -4,6 +4,7 @@ import com.movie.community.controller.dto.request.MemberRequestDTO;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -11,6 +12,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,15 +40,13 @@ public class Member {
 	private int age;
 
 	@Column
-	@Enumerated(EnumType.STRING)
-	private Rank rank;
-
-	@Column
 	private String roles;
-//	private Role role;
 
 	@Column
 	private LocalDateTime createdDate;
+
+	@OneToMany(mappedBy = "member", cascade = CascadeType.REMOVE)
+	private List<Journal> journals;
 
 	public Member(MemberRequestDTO requestDTO) {
 		insertDtoDataToEntity(requestDTO);
@@ -58,14 +58,6 @@ public class Member {
 		insertDtoDataToEntity(requestDTO);
 	}
 
-	public void setRank(String rank) {
-		for (Rank value : Rank.values()) {
-			if (value.isEqual(rank)) {
-				this.rank = value;
-				return;
-			}
-		}
-	}
 
 	public List<String> getRoleList() {
 		if (this.roles.length() > 0) {
@@ -74,20 +66,11 @@ public class Member {
 			return new ArrayList<>();
 		}
 	}
-//	public void setRole(String role) {
-//		for (Role value : Role.values()) {
-//			if (value.isEqual(role)) {
-//				this.role = value;
-//				return;
-//			}
-//		}
-//	}
 
 	private void insertDtoDataToEntity(MemberRequestDTO requestDTO) {
 		this.name = requestDTO.getName();
 		this.account = requestDTO.getAccount();
 		this.password = requestDTO.getPassword();
 		this.age = requestDTO.getAge();
-		setRank(requestDTO.getRank());
 	}
 }

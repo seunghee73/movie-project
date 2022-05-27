@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<!--      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">-->
+
+<!-- 01_nav_footer.html -->
+<div th:fragment="navFragment">
+    <nav class="navbar navbar-expand-md sticky-top navbar-light">
+        <div class="container-fluid d-flex flex-justify-content-between flex-align-items-center">
+            <a class="navbar-brand" th:href="@{/}">
+                <img th:src="@{/images/logo.png}" alt="Logo Image">
+            </a>
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="nav-menu-list" class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- # 로그인 여부에 따라서 변경 해줘야 하는 부분 # -->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link h2 mb-0" href="#" data-bs-toggle="modal"-->
+<!--                               data-bs-target="#exampleModal">LOGIN</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link h2 mb-0" th:href="@{/sign-up}">SIGN-UP</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link h2 mb-0" th:href="@{/view/journals}">My-Story</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link h2 mb-0" th:href="@{/view/journal-form}">Journal</a>-->
+<!--                        </li>-->
+                        <li class="nav-item">
+                            <a id="logout" type="button" class="nav-link h2 mb-0">LOGOUT</a>
+                        </li>
+<!--                        <li class="nav-item">-->
+<!--                            <a type="button" class="nav-link h2 mb-0" style="color: black">||</a>-->
+<!--                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 로그인 모달 -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">LOGIN</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="m-4">
+                        <label for="login-account" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="login-account" name="login-account">
+                    </div>
+                    <div class="m-4">
+                        <label for="login-password" class="form-label">PASSWORD</label>
+                        <input type="password" class="form-control" id="login-password" name="login-password">
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button id="login" type="button" class="btn btn-secondary">LOGIN</button>
+                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</html>

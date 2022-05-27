@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/default_layout">
+
+<th:block layout:fragment="content">
+
+    <!-- 회원 가입 양식 -->
+    <div class="container d-flex justify-content-center">
+        <div class="">
+            <form class="justify-content-center mb-0">
+                <h2 class="form-group m-2 text-center me-3">SIGN UP</h2>
+
+                <div class="form-group m-2">
+                    <label class="w-0" style="width: 30px;" for="name">이름</label>
+                    <input class="w-75" type="text" id="name">
+                </div>
+
+                <div class="form-group m-2">
+                    <label class="w-0" style="width: 30px;" for="account">ID</label>
+                    <input class="w-75" type="text" id="account">
+                </div>
+
+                <div class="form-group m-2">
+                    <label class="w-0" style="width: 30px;" for="password">PW</label>
+                    <input class="w-75" type="password" id="password">
+                </div>
+
+                <div class="form-group m-2">
+                    <label class="w-0" style="width: 30px;" for="age">Age</label>
+                    <input class="w-75" type="text" id="age">
+                </div>
+
+                <!--            <div class="form-group">-->
+                <!--                <label for="rank">RANK</label>-->
+                <!--                <input type="text" id="rank">-->
+                <!--            </div>-->
+
+                <div class="form-group mb-0" style="display: none">
+                    <label for="roles">ROLE : </label>
+                    <input value="user" type="text" id="roles">
+                </div>
+            </form>
+
+            <div class="d-flex justify-content-end align-items-center me-5">
+                <button id="join--submit" class="mt-0 btn btn-secondary">SIGN UP</button>
+            </div>
+        </div>
+
+    </div>
+
+</th:block>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/default_layout">
+
+<th:block layout:fragment="content">
+    <!-- create_post.html -->
+    <!-- # 임의로 써 놓은 내용이어서 선택된 게시글을 출력해줘야함 # -->
+    <h1 class="text-center m-5">POSTING</h1>
+
+    <form id="update-posting" th:object="${post}" method="post">
+        <div class="m-5">
+            <label for="update-posting-title" class="form-label"><h3>TITLE</h3></label>
+            <input type="text" th:field="*{title}" id="update-posting-title">
+        </div>
+
+        <div class="m-5">
+            <label for="update-posting-content" class="form-label"><h3>CONTENT</h3></label>
+            <textarea class="form-control" th:field="*{content}" id="update-posting-content" rows="10"></textarea>
+        </div>
+
+        <div class="d-flex justify-content-end">
+            <button id="update-posting-submit" type="button" class="btn btn-secondary me-2">수정하기</button>
+            <button onclick="goBack()" type="button" class="btn btn-dark me-5">BACK</button>
+        </div>
+    </form>
+</th:block>
+</html>

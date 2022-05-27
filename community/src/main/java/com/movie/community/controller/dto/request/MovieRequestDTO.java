@@ -14,12 +14,12 @@ public class MovieRequestDTO {
 	private Long id;
 	private String title;
 	private String description;
-	private float score;
+	private double score;
 	private int voteCount;
 	private String imageUrl;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate releasedDate;
-	private float popularity;
+	private double popularity;
 	private String genres;
 	private String holiday;
 

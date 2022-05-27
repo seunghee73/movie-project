@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/default_layout">
+
+<th:block layout:fragment="content">
+    <!-- create_journal.html -->
+    <h1 class="text-center m-5">TODAY</h1>
+
+    <form>
+        <div class="m-5">
+            <label for="journal-date" class="form-label"><h3>DATE</h3></label>
+            <input class="form-control" id="journal-date" rows="1" placeholder="0000-00-00">
+        </div>
+
+        <div class="m-5">
+            <label for="journal-imageUrl" class="form-label"><h3>SCENE</h3></label>
+            <input class="form-control" id="journal-imageUrl" rows="1" placeholder="url"/>
+        </div>
+
+        <div class="m-5">
+            <label for="journal-emotion" class="form-label"><h3>EMOTION</h3></label>
+            <input class="form-control" id="journal-emotion" rows="1">
+        </div>
+        <div class="m-5">
+            <label for="journal-quote" class="form-label"><h3>QUOTE</h3></label>
+            <input class="form-control" id="journal-quote" rows="10">
+        </div>
+
+
+    </form>
+    <div class="d-flex justify-content-end mb-5">
+        <button id="journal-submit" type="button" class="btn btn-secondary me-2 ">SUBMIT</button>
+        <button th:onclick="goBack()" class="btn btn-dark me-5">BACK</button>
+    </div>
+
+</th:block>
+</html>

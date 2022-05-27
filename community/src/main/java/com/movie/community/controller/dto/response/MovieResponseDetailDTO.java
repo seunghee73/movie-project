@@ -14,7 +14,7 @@ public class MovieResponseDetailDTO {
 	private String title;
 	private String description;
 	private String imageUrl;
-	private float score;
+	private double score;
 	private LocalDate releasedDate;
 
 	public MovieResponseDetailDTO(Movie movie) {

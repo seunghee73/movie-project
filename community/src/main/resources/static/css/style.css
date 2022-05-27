@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.my-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #161623;
+}
+
+my-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3, #e91e63);
+    clip-path: circle(20% at 10% 10%);
+}
+
+.my-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.my-container .card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.my-container .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: translateY(150px);
+    opacity: 0.4;
+    transition: 0.5s;
+}
+
+.my-container .card:hover .content {
+    transform: translateY(50px);
+    opacity: 1;
+}
+
+.my-container .card img {
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0.4;
+    transition: 0.5s;
+}
+
+.my-container .card:hover img {
+    transform: translateY(-40px);
+    opacity: 1;
+}
+
+.my-container .card img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50%;
+    font-size: 8em;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+.my-container .card .content h3 {
+    font-size: 1.4em;
+    color: black;
+    z-index: 1;
+}
+
+.my-container .card .content p {
+    font-size: 1em;
+    color: black;
+    font-weight: 300;
+}
+
+.my-container .card .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    color: #000;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

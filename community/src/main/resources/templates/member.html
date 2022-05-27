@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/default_layout">
+
+<th:block layout:fragment="content">
+
+    <!-- members.html -->
+    <h1 class="text-center m-2">MY DIARY</h1>
+    <br>
+    <h2 id="journal-writer" class="text-center m-5"></h2>
+<!--    <a class="nav-link h2 mb-0" th:href="@{/view/journal-form}">일기 쓰기</a>-->
+    <a class="d-flex justify-content-end mx-5 p-0" th:href="@{/view/journal-form}" style="color:black; text-decoration: none;">
+        <h3>NEW DIARY</h3>
+    </a>
+    <section >
+        <!-- card section -->
+        <div id="journal-view-container" class="my-container">
+
+        </div>
+    </section>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</th:block>
+</html>

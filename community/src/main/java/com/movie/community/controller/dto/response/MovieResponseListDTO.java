@@ -12,12 +12,16 @@ import java.time.LocalDate;
 public class MovieResponseListDTO {
 	private Long id;
 	private String title;
+	private String imageUrl;
 	private LocalDate releasedDate;
-	private float score;
+	private double popularity;
+	private double score;
 
 	public MovieResponseListDTO(Movie movie) {
 		this.id = movie.getId();
 		this.title = movie.getTitle();
+		this.imageUrl = movie.getImageUrl();
+		this.popularity = movie.getPopularity();
 		this.releasedDate = movie.getReleasedDate();
 		this.score = movie.getScore();
 	}

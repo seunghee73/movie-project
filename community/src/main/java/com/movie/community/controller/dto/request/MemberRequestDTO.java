@@ -9,7 +9,6 @@ public class MemberRequestDTO {
 	private String account;
 	private String password;
 	private int age;
-	private String rank;
 	private String roles;
 
 	public Member toEntity() {
