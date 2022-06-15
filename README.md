@@ -71,7 +71,7 @@
 
 1. API 결정  
 
-   프로젝트에 가장 적합한 API의 경우, TMDB에서 제공하는 영화 API(https://developers.themoviedb.org/3)라고 판단했다. 여기에서 TMDB 데이터는 Kaggle에서 제공하는 데이터가 아닌 TMDB 사이트에서 제공하는 API 데이터를 크롤링한 데이터를 의미한다. 판단의 근거는 다음과 같다.  
+   프로젝트에 가장 적합한 API의 경우, TMDB에서 제공하는 영화 API (https://developers.themoviedb.org/3) 라고 판단했다. 여기에서 TMDB 데이터는 Kaggle에서 제공하는 데이터가 아닌 TMDB 사이트에서 제공하는 API 데이터를 크롤링한 데이터를 의미한다. 판단의 근거는 다음과 같다.  
 
      * Kaggle에서 제공되는 TMDB 데이터는 영어로 설정이 되어 있어 웹 페이지에 연동이 불편하다. 하지만 TMDB 사이트에서 데이터를 직접 크롤링하게 되면 설정 언어를 한국어로 지정이 가능하다.  
 
